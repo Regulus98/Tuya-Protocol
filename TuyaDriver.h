@@ -27,17 +27,17 @@
 
 typedef enum
 {
-    TUYA_CMD_HEARTBEAT     			   = 0x0,
+    TUYA_CMD_HEARTBEAT     	       = 0x0,
     TUYA_CMD_PRODUCT_INFO              = 0x1,
     TUYA_CMD_WORKING_MODE              = 0x2,
-    TUYA_CMD_REPORT_NETWORK_STATUS 	   = 0x3,
+    TUYA_CMD_REPORT_NETWORK_STATUS     = 0x3,
     TUYA_CMD_RESET_WIFI                = 0x4,
-    TUYA_CMD_SELECT_PAIRING_MODE 	   = 0x5,
-    TUYA_CMD_SEND	  	  			   = 0x6,		/* Sent by the module */
-    TUYA_CMD_REPORT_STATUS 			   = 0x7,		/* Sent by the MCU */
-    TUYA_CMD_QUERY_WORKING_STATUS	   = 0x8,
+    TUYA_CMD_SELECT_PAIRING_MODE       = 0x5,
+    TUYA_CMD_SEND	  	       = 0x6,		/* Sent by the module */
+    TUYA_CMD_REPORT_STATUS 	       = 0x7,		/* Sent by the MCU */
+    TUYA_CMD_QUERY_WORKING_STATUS      = 0x8,
     /* ----------------------------------- */
-    TUYA_CMD_UNKNOWN				   = 0xFF,
+    TUYA_CMD_UNKNOWN		       = 0xFF,
 } TuyaCommand_t;
 
 typedef enum
@@ -51,7 +51,7 @@ typedef enum
 
 typedef enum
 {
-    DP_TYPE_RAW      = 0x00,
+    DP_TYPE_RAW          = 0x00,
     DP_TYPE_BOOLEAN	 = 0x01,
     DP_TYPE_VALUE	 = 0x02,
     DP_TYPE_STRING	 = 0x03,
@@ -78,35 +78,35 @@ typedef enum
 
 typedef enum
 {
-    DP_ID_TOTAL_FORWARD_ENERGY   = 1,
+    DP_ID_TOTAL_FORWARD_ENERGY   	 = 1,
     DP_ID_WORK_STATE			 = 3,
-    DP_ID_CHARGE_CURRENT_SET	 = 4,			/* Issue and report */
-    DP_ID_SINGLE_PHASE_POWER	 = 5,
-    DP_ID_PHASE_A				 = 6,
-    DP_ID_PHASE_B				 = 7,
-    DP_ID_PHASE_C				 = 8,
+    DP_ID_CHARGE_CURRENT_SET	 	 = 4,			/* Issue and report */
+    DP_ID_SINGLE_PHASE_POWER	 	 = 5,
+    DP_ID_PHASE_A			 = 6,
+    DP_ID_PHASE_B			 = 7,
+    DP_ID_PHASE_C			 = 8,
     DP_ID_TOTAL_POWER			 = 9,
-    DP_ID_FAULT			 		 = 10,
+    DP_ID_FAULT			         = 10,
     DP_ID_ALARM_SET_1			 = 11,			/* Issue and report */
     DP_ID_ALARM_SET_2			 = 12,			/* Issue and report */
-    DP_ID_CONNECTION_STATE	     = 13,
-    DP_ID_WORK_MODE			 	 = 14,			/* Issue and report */
+    DP_ID_CONNECTION_STATE	         = 13,
+    DP_ID_WORK_MODE			 = 14,			/* Issue and report */
     DP_ID_BALANCE_ENERGY		 = 15,
     DP_ID_CLEAR_ENERGY			 = 16,			/* Issue and report */
     DP_ID_ENERGY_CHARGE			 = 17,			/* Issue and report */
-    DP_ID_SWITCH				 = 18,			/* Issue and report */
+    DP_ID_SWITCH			 = 18,			/* Issue and report */
     DP_ID_SCHEDULE_CHARGING		 = 19,			/* Issue and report */
     DP_ID_CHARGE_CARD_ID		 = 20,			/* Issue and report */
-    DP_ID_METER_ID				 = 22,
+    DP_ID_METER_ID			 = 22,
     DP_ID_SYSTEM_VERSION		 = 23,
     DP_ID_CURRENT_TEMP			 = 24,
-    DP_ID_ONCE_CHARGE_ENERGY	 = 25,
+    DP_ID_ONCE_CHARGE_ENERGY	 	 = 25,
     DP_ID_UPDATE_ALL_CARDS		 = 26,			/* Issue and report */
     DP_ID_ONLINE_STATE			 = 27,			/* Issue and report */
     DP_ID_DELAY_POWER_ON		 = 28,			/* Issue and report */
-    DP_ID_LOCK_GUN				 = 29,			/* Issue and report */
+    DP_ID_LOCK_GUN			 = 29,			/* Issue and report */
     DP_ID_RANDOM_DELAY_SET		 = 30,			/* Issue and report */
-    DP_ID_DSR_TIMER				 = 31,			/* Issue and report */
+    DP_ID_DSR_TIMER		         = 31,			/* Issue and report */
     DP_ID_IP_ADDRESS			 = 32,			/* Issue and report */
 } DataPointID_t;
 
@@ -176,8 +176,8 @@ typedef enum
 
 typedef enum
 {
-    TUYA_BUSY, 			/* Operation is still in process */
-    TUYA_OK,       		/* Operation has completed successfully */
+    TUYA_BUSY, 		/* Operation is still in process */
+    TUYA_OK,       	/* Operation has completed successfully */
     TUYA_ERROR,     	/* Operation encountered an error */
     TUYA_TIMEOUT     	/* Operation timed out */
 } TuyaStatus_t;
@@ -204,7 +204,7 @@ typedef struct
 {
     int32_t  lTotalForwardEnergy;
     int32_t  lWorkState;					/* Charging State */
-    int32_t  lIset;							/* Charging Current Set */
+    int32_t  lIset;						/* Charging Current Set */
     int32_t  lSinglePhasePower;
     int32_t  lVinR_Rms;
     int32_t  lVinS_Rms;
